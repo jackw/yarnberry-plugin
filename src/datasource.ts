@@ -7,6 +7,10 @@ export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptio
   constructor(instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
     super(instanceSettings);
   }
+  getQueryDisplayText(query: MyQuery) {
+    console.log('getQueryDisplayText', query);
+    return query.queryText ?? '';
+  }
 
   getDefaultQuery(_: CoreApp): Partial<MyQuery> {
     return DEFAULT_QUERY;
