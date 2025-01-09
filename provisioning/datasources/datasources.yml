@@ -1,0 +1,14 @@
+apiVersion: 1
+
+datasources:
+  - name: 'yarnberry'
+    type: 'heywesty-yarnberry-datasource'
+    access: proxy
+    isDefault: false
+    orgId: 1
+    version: 1
+    editable: true
+    jsonData:
+      path: '/resources'
+    secureJsonData:
+      apiKey: 'api-key'
